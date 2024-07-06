@@ -30,7 +30,7 @@ class Player(QtWidgets.QWidget):
         self.autoChangeDirection = False
         self.isWalking = True
         self.restoreWalking = False
-        self.faceDirection = "right"
+        self.faceDirection = "right" if rd.random() > 0.5 else "left"
         self.currentIndex = 1
         self.walkingSpeed = 10
         self.timer = QtCore.QTimer()
