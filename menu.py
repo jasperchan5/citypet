@@ -26,10 +26,7 @@ class Menu(QtWidgets.QWidget):
             petName = petName.replace(" ", "")
         bundle_dir = getattr(sys, '_MEIPASS', os.path.abspath(os.path.dirname(__file__)))
         pet_script_path = os.path.join(bundle_dir, 'pet.py')
-        print(os.listdir(bundle_dir))
-        print(os.listdir(bundle_dir + '\\images'))
-        print(os.listdir(bundle_dir + '\\audio'))
-        subprocess.Popen(["python", pet_script_path, petName.casefold()])
+        subprocess.Popen(["python", pet_script_path, petName.casefold()], shell=True)
         
         
 

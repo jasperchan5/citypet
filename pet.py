@@ -160,7 +160,7 @@ class Player(QtWidgets.QWidget):
     def quit(self):
         self.close()
         sys.exit()
-print(sys.argv)
+        
 playerApp = QtWidgets.QApplication([])
 name = sys.argv[1]
 player = Player(None, name)
